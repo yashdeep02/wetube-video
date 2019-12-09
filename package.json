@@ -2,8 +2,8 @@
   "name": "wetube",
   "version": "1.0.0",
   "description": "\"# wetube-video\" \r \"# wetube-video\"",
-  "main": "index.js",
   "scripts": {
+    "start": "nodemon --exec babel-node init.js --delay 2",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +17,17 @@
   },
   "homepage": "https://github.com/yashdeep02/wetube-video#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.7.5",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
   }
 }

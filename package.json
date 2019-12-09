@@ -1,0 +1,22 @@
+{
+  "name": "wetube",
+  "version": "1.0.0",
+  "description": "\"# wetube-video\" \r \"# wetube-video\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashdeep02/wetube-video.git"
+  },
+  "author": "Yashdeep",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashdeep02/wetube-video/issues"
+  },
+  "homepage": "https://github.com/yashdeep02/wetube-video#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,16 @@
+extends layouts/main
+include mixins/videoPlayer
+
+block content
+    .video-detail__container
+        +videoPlayer({
+            src:"http://goog.com/mp4"
+        })
+        .video__info
+            if loggedUser && video.creator.id === loggedUser.id
+                a(href=routes.editVideo(video.id))
+                    button Edit video
+            h5.video__title="video.title"
+            p.video__description="video.description"
+            
+                span.video__views 1 view

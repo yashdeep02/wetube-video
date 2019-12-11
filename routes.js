@@ -40,7 +40,10 @@ const routes = {
         if(id) return `/videos/${id}`
         else return VIDEO_DETAILS
     },
-    editVideo: EDIT_VIDEO,
+    editVideo: id => {
+        if(id) return `/videos/edit/${id}`
+        else return EDIT_VIDEO
+    },
     deleteVideo: DELETE_VIDEO
 }
 

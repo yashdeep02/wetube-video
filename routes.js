@@ -23,6 +23,10 @@ const EDIT_VIDEO = "/:id/edit";
 const DELETE_VIDEO = "/:id/delete";
 
 //Github
+const FB = "/auth/facebook"
+const FACEBOOK_CALLBACK = "/auth/facebook/callback";
+
+//Github
 const GITHUB = "/auth/github"
 const GITHUB_CALLBACK = "/auth/github/callback";
 
@@ -55,6 +59,8 @@ const routes = {
     },
     github: GITHUB,
     githubCallback : GITHUB_CALLBACK,
+    facebook: FB,
+    facebookCallback : FACEBOOK_CALLBACK,
     me: ME
 }
 

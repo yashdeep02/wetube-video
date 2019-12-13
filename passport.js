@@ -1,10 +1,21 @@
 import passport from "passport";
 import User from "./models/User";
 import GithubStrategy from "passport-github"
-import { githubLoginCallback } from "./controllers/userController";
+import FacebookStrategy from "passport-facebook";
+import { githubLoginCallback, facebookLoginCallback } from "./controllers/userController";
 import routes from "./routes";
 
 passport.use(User.createStrategy());
+
+passport.use(new FacebookStrategy({
+    clientID: process.env.FB_ID,
+    clientSecret: process.env.FB_SECRET,
+    callbackURL: "http://localhost:4000/auth/facebook/callback",
+    profileFields:['id', 'displayName','photos','email'],
+    scope:['public_profile', 'email']
+  },
+  facebookLoginCallback
+  ))
 
 passport.use(new GithubStrategy({
     clientID: process.env.GH_ID,

@@ -87,6 +87,23 @@ export const postEditVideo = async(req, res) => {
     res.render("editVideo", { pageTitle : "Edit Video"});
 }
 
+export const postRegisterView = async ( req, res) => {
+  const {
+    params: {id}
+  } = req;
+  try{
+  const video = await Video.findById(id)
+  video.views += 1
+  video.save();
+  res.status(201)
+  }catch(error){
+    res.status(400)
+    
+  }finally{
+    res.end()
+  }
+}
+
 export const deleteVideo = async (req, res) => {
     const {
       params: { id }
@@ -103,3 +120,4 @@ export const deleteVideo = async (req, res) => {
     }
     res.redirect(routes.home);
   };
+

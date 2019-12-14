@@ -8,6 +8,7 @@ import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 import mongoose from "mongoose"
 import globalRouter from "./routers/globalRouter";
+import apiRouter from "./routers/apiRouter";
 import routes from "./routes";
 import session from "express-session";
 
@@ -40,6 +41,7 @@ app.use(localsMiddleware);
 
 app.use("", globalRouter); 
 app.use(routes.users, userRouter);
+app.use(routes.api, apiRouter)
 app.use(routes.videos, videoRouter);
 
 export default app;
